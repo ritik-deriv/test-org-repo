@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Get-Github-Actions-User:
-    environment: dependabot-clickup-integration
     runs-on: ubuntu-latest
     steps:
       - name: Username 
@@ -17,13 +16,12 @@ jobs:
         uses: test-organization-wengonn/test-custom-action@v1.12
         with:
           clickup_api_token: ${{ secrets.CLICKUP_API_TOKEN }}
-          pull_request_title: 'Test from normal user - 2'
+          pull_request_title: 'Test from normal user - 3'
           team_id: ${{ secrets.TEAM_ID }}
           list_id: ${{ secrets.LIST_ID }}
      
 
   Explore-GitHub-Actions:
-    environment: dependabot-clickup-integration
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
