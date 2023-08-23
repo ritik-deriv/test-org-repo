@@ -3,14 +3,13 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Get-Github-Actions-User:
-    environment: dependabot-clickup-integration
     runs-on: ubuntu-latest
     steps:
       - name: Username 
         run: echo "🎉 The job was triggered by a ${{ github.actor }}."   
 
-      - name: echo env variable 
-        run: echo "TEAM_ID - ${{ secrets.TEAM_ID }}." 
+      # - name: echo env variable 
+      #   run: echo "TEAM_ID - ${{ secrets.TEAM_ID }}." 
 
       # - name: Test custom action - clickup integration
       #   id: clickup-task-creation
@@ -23,6 +22,7 @@ jobs:
      
 
   Explore-GitHub-Actions:
+    environment: dependabot-clickup-integration
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
