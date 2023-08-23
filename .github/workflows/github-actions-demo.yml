@@ -10,7 +10,7 @@ jobs:
 
       - name: Test custom action
         id: hello
-        uses: WengOnn-Deriv/test-custom-action@v1.1
+        uses: test-organization-wengonn/test-custom-action@v1.1
         with:
           who-to-greet: 'Mona the Octocat'
 
