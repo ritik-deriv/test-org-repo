@@ -15,8 +15,10 @@ jobs:
         with:
           clickup_api_token: ${{ secrets.CLICKUP_API_TOKEN }}
           pull_request_title: 'Test from normal user'
-          team_id: ${{ secrets.LIST_ID }}
-          list_id: ${{ secrets.TEAM_ID }}
+          team_id: ${{ secrets.TEAM_ID }}
+          list_id: ${{ secrets.LIST_ID }}
+      - name: echo env variable 
+        run: echo "TEAM_ID - ${{ secrets.TEAM_ID }}."  
 
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
