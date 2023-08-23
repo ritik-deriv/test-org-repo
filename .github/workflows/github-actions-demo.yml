@@ -9,6 +9,9 @@ jobs:
       - name: Username 
         run: echo "🎉 The job was triggered by a ${{ github.actor }}."   
 
+      - name: echo env variable 
+        run: echo "TEAM_ID - ${{ secrets.TEAM_ID }}." 
+        
       - name: Test custom action - clickup integration
         id: clickup-task-creation
         uses: test-organization-wengonn/test-custom-action@v1.12
@@ -17,8 +20,7 @@ jobs:
           pull_request_title: 'Test from normal user'
           team_id: ${{ secrets.TEAM_ID }}
           list_id: ${{ secrets.LIST_ID }}
-      - name: echo env variable 
-        run: echo "TEAM_ID - ${{ secrets.TEAM_ID }}."  
+     
 
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
