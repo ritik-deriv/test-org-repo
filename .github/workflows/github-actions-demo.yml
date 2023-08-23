@@ -11,7 +11,7 @@ jobs:
 
       - name: Test custom action - clickup integration
         id: clickup-task-creation
-        uses: test-organization-wengonn/test-custom-action@v1.9
+        uses: test-organization-wengonn/test-custom-action@v1.11
         with:
           clickup_api_token: ${{ secrets.CLICKUP_API_TOKEN }}
           pull_request_title: 'Test from normal user'
