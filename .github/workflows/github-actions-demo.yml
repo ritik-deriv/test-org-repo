@@ -5,7 +5,14 @@ jobs:
   Get-Github-Actions-User:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was triggered by a ${{ github.actor }}."   
+      - name: Username 
+        run: echo "🎉 The job was triggered by a ${{ github.actor }}."   
+
+      - name: Test custom action
+        id: hello
+        uses: WengOnn-Deriv/test-custom-action
+        with:
+          who-to-greet: 'Mona the Octocat'
 
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
